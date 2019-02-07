@@ -28,7 +28,7 @@ In order to capture the error rate, we must find a performance measure. As menti
 The RMSE function takes two inputs: 
 - A column vector with instances of the data as its rows (which are row vectors) without their labels (so just the inputs without their output). 
 - A hypothesis, which is the function that will predict the output for an instance. 
-What RMSE does in the context of housing price is, predict the housing price for an instance, let's call it ŷ. Substract the actual housing price (let's call it y) for that instance, so ŷ - y. This is the error for that instance. We then sum the error of all instances, multiple it by the reciprocal of the amount of instances (call it m) and take the square root of it all. <b>Refer to page 37-39 for this measure</b>
+What RMSE does in the context of housing price is, predict the housing price for an instance, let's call it ŷ. Substract the actual housing price (let's call it y) for that instance, so ŷ - y. This is the error for that instance. We then sum the error of all instances, multiple it by the reciprocal of the amount of instances (call it m) and take the square root of it all. <b>Refer to page 37-39 for RMSE and MAE</b>
 
 We are essentially just measuring the Euclidean distance between the label, and our own prediction for all instances. Refer to other measures such as MAE (Mean Absolute Error) as well. 
 
