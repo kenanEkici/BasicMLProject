@@ -13,7 +13,7 @@ Refer to the preface of the book if you want to reproduce this code for personal
 
 ### Preparing the project 
 
-I use virtualenv locally to isolate the necessary Python packages. With ```pip freeze > requirements.txt``` every package in the environment was piped into a requirements file. The virtual environment has been ignored.
+I use virtualenv locally to isolate the necessary Python packages. With ```pip freeze > requirements.txt``` every package in the environment was piped into a requirements file. The virtual environment has not been included in the source code.
 
 ### Overview of the problem
 
