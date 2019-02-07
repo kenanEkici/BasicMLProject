@@ -23,13 +23,14 @@ We need to build a model of the housing price data of California. This data cons
 
 This problem is clearly a regression problem (as opposed to a classification one), and more specifically, a multivariable regression problem, given the multiple features that our data is based upon. There is no motive for the model to constantly adapt to new data, meaning that a batch learning process will do for this project.  
 
-In order to capture the error rate, we must find a performance measure. As mentioned in the book, a typical performance measure for regression problems is the Root Mean Square Error, or RMSE for short. It measures the standard deviation of the errors the system makes in its predictions and is based on the Gaussian distribution (68-95-99.7 rule).
-It takes two inputs: 
+In order to capture the error rate, we must find a performance measure. As mentioned in the book, a typical performance measure for regression problems is the Root Mean Square Error, or RMSE for short. It measures the standard deviation of the errors the system makes in its predictions and is based on the Gaussian distribution (68-95-99.7 rule). This means that for example, in the context of the housing prices, an RMSE value of 50000, means that 68% of all the predictions are close to 50000$ (1*sigma) of their actual label, 95% are close to 100000$ (2*sigma), and 99.7% to 150000$ (3*sigma). 
+
+The RMSE function takes two inputs: 
 - A column vector with instances of the data as its rows (which are row vectors) without their labels (so just the inputs without their output). 
 - A hypothesis, which is the function that will predict the output for an instance. 
 What RMSE does in the context of housing price is, predict the housing price for an instance, let's call it ŷ. Substract the actual housing price (let's call it y) for that instance, so ŷ - y. This is the error for that instance. We then sum the error of all instances, multiple it by the reciprocal of the amount of instances (call it m) and take the square root of it all. <b>Refer to page 37-39 for this measure</b>
 
-We are essentially just measuring the Euclidean distance between the label, and our own prediction. Refer to other measures such as MAE (Mean Absolute Error) as well. 
+We are essentially just measuring the Euclidean distance between the label, and our own prediction for all instances. Refer to other measures such as MAE (Mean Absolute Error) as well. 
 
 ### Fetching the data
 
