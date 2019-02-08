@@ -34,6 +34,24 @@ We are essentially just measuring the Euclidean distance between the label, and 
 
 ### Fetching the data
 
-We fetch the tar file from the url mentioned in the book and extract it into a directory. The tar file contains the CSV file which represents the housing data. We need this data to train our model. Refer to the ```fetch_data([download_url, data_path, file_name)``` method. 
+We fetch the tar file from the url mentioned in the book and extract it into a directory. The tar file contains the CSV file 
+which represents the housing data. We need this data to train our model. Refer to the ```fetch_data([download_url, data_path, file_name])``` method. 
+Afterwards, the ```load_csv([data_path, csv_name])``` function reads the data from the CSV file and returns a DataFrame 
+object. 
 
+### Analyzing the data
+
+In the main method, we print the head (which is a 5x10 matrix) of this data just to visualize what the data looks 
+like). Each row represents a district with 10 columns (attributes). We use ```.info()``` on the DataFrame object in order 
+to retrieve more information about the columns and the amount of rows. For the sake not to pollute the output of the main 
+method, we omit this in run.py. Recall that there are entries in which some attributes are missing (null). This is 
+absolutely possible in real world data and we take care of this later on. Also notice that every column is numerical except 
+the "ocean_proximity" attribute. This is a categorical attribute. We can visualize all the categories for this attribute by invoking 
+```housing_data["ocean_proximity"].value_counts()``` on the DataFrame object. We can also use the ```describe()``` method on 
+the object in order to get more information on the numerical attributes, such as the amount of entries for an attribute, the 
+min, max and standard deviation values. For a more visual overview, we can use the ```hist()``` method on the DataFrame with 
+matrplotlib in order to plot a histogram of the numerical attributes. A few things to note from the histograms is that some 
+of the attributes were scaled and even capped. It is common for attributes to be preprocessed beforehand and this is not 
+necessarily a problem. The histograms are also tail heavy, we will need to transform these later to more of a 
+bell-shaped/Gaussian distribution. 
 
