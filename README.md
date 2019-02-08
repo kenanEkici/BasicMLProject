@@ -55,3 +55,15 @@ of the attributes were scaled and even capped. It is common for attributes to be
 necessarily a problem. The histograms are also tail heavy, we will need to transform these later to more of a 
 bell-shaped/Gaussian distribution. 
 
+### Creating training and test data
+
+In order to prevent overfitting our model, we have to split our data into sets. Recall that overfitting occurs when our 
+model is generalized on our entire data, failing to perform well on new data. We use the ```train_test_split([data, 
+test_size, random_state])``` function from the sklearn package for this utility. It will sample the data according to a seed 
+(such as 42) and create a proportion (usually 20%) of the data into test data and the rest will be used as training data. We 
+have used random sampling, but usually we have to consider that our test data must be representative of our whole 
+dataset, otherwise we would have to deal with sampling bias (refer to stratified sampling). If we consider the fact that 
+median income (one of the attributes of the housing data) is an important attribue to predict median housing prices, then 
+the test set must be representative of the various categories of income in the whole dataset. This attribute is numerical 
+and must be converted into categorical data. After we've done this, we will replace the ```train_test_split``` function with 
+```split([data, column_to_split_by]``` using StratifiedShuffleSplit class from the sklearn package. 
