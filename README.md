@@ -2,7 +2,7 @@
 
 This repository is in reference to Chapter 2, End-to-End Machine Learning project. 
 
-According to the author, the purpose of this chapter is to learn working on common tasks of Machine Learning. This includes, retrieving data, analyze a given problem, analyze the data and gain insight, prepare and transform the data for Machine Learning algorithms, select a model and train it, fine-tune the model and finally present and maintain the solution.
+According to the author, the purpose of this chapter is to get hands on experience with important ML and math packages such as Sklearn, Matplotlib, Numpy, Pandas. Another objective is to get familiar with Machine Learning tasks. Some of these tasks include retrieving data, analyze a given problem, analyze the data and gain insight, prepare and transform the data for Machine Learning algorithms, select a model and train it, fine-tune the model and finally present a solution to the client and maintain if necessary. 
 
 The code in this repository is reproduced at best and slightly modified according to my needs. It serves as a bookmark for future projects and as a reference to my Machine Learning portfolio.
 
@@ -10,7 +10,7 @@ Refer to the preface of the book if you want to reproduce this code for personal
 
 ## Running the code
 
-It is fairly easy to run the code thanks to Jupyter Notebook. Assuming you have Python 3.7, all you have to do is clone this repository, install the packages with pip and run Jupyter Notebook with '''jupyter notebook run.ipynb'''. From there you can run each block of code with Jupyter and follow further instructions if needed. The code might not work on other Python versions, although I haven't tested this. 
+It is fairly easy to run the code using Jupyter Notebook. Assuming you have Python 3.7, all you have to do is clone this repository, install the packages with pip and run Jupyter Notebook with '''jupyter notebook run.ipynb'''. From there you can run each block of code with Jupyter and follow further instructions if needed. The code might not work on other Python versions, although I haven't tested this. 
 
 ## Notes
 
